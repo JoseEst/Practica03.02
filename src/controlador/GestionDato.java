@@ -17,7 +17,8 @@ import java.util.List;
 public class GestionDato {
 
     public List OrdenarBurbuja(List<Casa> lista) {
-
+        
+        System.err.println("Ordenamiento Burbuja");
         for (int i = 0; i < lista.size(); i++) {
 
             for (int j = i + 1; j < lista.size(); j++) {
@@ -39,6 +40,7 @@ public class GestionDato {
 
     public List OrdenarQuicksort(List<Casa> lista, int izq, int der) {
 
+        System.err.println("Ordenamiento QuickSort");
         Casa pivote = lista.get(izq); // tomamos primer elemento como pivote
         int i = izq; // i realiza la búsqueda de izquierda a derecha
         int j = der; // j realiza la búsqueda de derecha a izquierda

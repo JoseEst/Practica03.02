@@ -26,7 +26,8 @@ public class Principal {
         // TODO code application logic here
         
         GestionDato gd = new GestionDato();
-        
+        List<Casa> Burbuja = new ArrayList();
+        List<Casa> QuickSort = new ArrayList();
         
         Propietario p = new Propietario(123, "Juan Perez");
         Propietario p1 = new Propietario(456, "Marco Rene");
@@ -67,15 +68,17 @@ public class Principal {
         lista.add(c1);
         lista.add(c2);
         lista.add(c3);
-        gd.OrdenarQuicksort(lista, 0, 3);
-        gd.OrdenarBurbuja(lista);
+        
+        System.err.println(gd.OrdenarQuicksort(lista, 0, 3));
+        System.err.println(gd.OrdenarBurbuja(lista));
+        
         
         list.imprimir();
 
         list.eliminarElemento(c1);
         
+        list.recuperarElemento(0);
         
-
         list.imprimir();
         
 
