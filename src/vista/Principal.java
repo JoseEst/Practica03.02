@@ -28,35 +28,54 @@ public class Principal {
         GestionDato gd = new GestionDato();
         
              
+        System.err.println("*****************************************");
+        System.err.println("            Agregar Propietarios ");
+        System.err.println("*****************************************");
         
         Propietario p = new Propietario(123, "Juan Perez");
         Propietario p1 = new Propietario(456, "Marco Rene");
         Propietario p2 = new Propietario(2341, "Tito Durazno  ");
         Propietario p3 = new Propietario(223423, "Henry Guaman");
-
+       
         Diccionario d = new Diccionario();
         d.agregarElemento(1, p);
         d.agregarElemento(2, p1);
         d.agregarElemento(3, p2);
         d.agregarElemento(4, p3);
-
         d.imprimir();
         
-        System.out.println("DESPUES DE ELIMINAR ");
+        
+        
+        
+        System.err.println("*****************************************");
+        System.err.println("         Eliminar un propietario");
+        System.err.println("*****************************************");
+        System.err.println("NOTA: EN ESTE CASO EL PROPIETARIO N°3");
         d.eliminarElemento(2);
-        d.imprimir();
-        System.out.println("Recuperar elemento");
+        
+        System.err.println("*****************************************");
+        System.err.println("         Recuperar un propietario");
+        System.err.println("*****************************************");
+        System.err.println("NOTA: EN ESTE CASO EL PROPIETARIO N°4");
         d.recuperarElemento(3);
-        System.out.println("Recuperar toda la lista");
+        
+        System.err.println("*****************************************");
+        System.err.println("        Recuperar todos propietario");
+        System.err.println("*****************************************");
         d.recuperarElementos();
         
-        System.out.println("Elementos de Casa");
+        d.imprimir();
+        
+        
+        System.err.println("*****************************************");
+        System.err.println("              Agregar Casas");
+        System.err.println("*****************************************");
         
         Casa c = new Casa(1, p);
         Casa c1 = new Casa(2, p1);
         Casa c2 = new Casa(3, p);
         Casa c3 = new Casa(4, p1);
-
+        
         Lista list = new Lista();
         list.agregarElemento(c);
         list.agregarElemento(c1);
@@ -69,19 +88,36 @@ public class Principal {
         lista.add(c2);
         lista.add(c3);
         
-        
-        System.err.println(gd.OrdenarQuicksort(lista, 0, 3));
-        System.err.println(gd.OrdenarBurbuja(lista));
-        
-        
         list.imprimir();
-
+        
+        System.err.println("*****************************************");
+        System.err.println("              Eliminar casa");
+        System.err.println("*****************************************");
         list.eliminarElemento(c1);
         
-        list.recuperarElemento(0);
+        System.err.println("*****************************************");
+        System.err.println("              Recuperar casa");
+        System.err.println("*****************************************");
+        System.err.println("NOTA: EN ESTE CASO LA CASA N°1");
+        list.recuperarElemento(1);
         
-        list.imprimir();
         
+        
+        System.err.println("*****************************************");
+        System.err.println("           Ordenamiento Burbuja");
+        System.err.println("*****************************************");
+        System.out.println(gd.OrdenarBurbuja(lista));
+        
+        
+         
+        System.err.println("*****************************************");
+        System.err.println("           Ordenamiento QuickSort");
+        System.err.println("*****************************************");
+        System.out.println(gd.OrdenarQuicksort(lista, 0, 3));
+        
+       
+        
+       
 
     }
 
